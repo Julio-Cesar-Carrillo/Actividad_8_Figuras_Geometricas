@@ -9,6 +9,7 @@ class FiguraGeometrica
     {
         return $this->tipoFigura = $tipofigura;
     }
+
     public function gettipofigura()
     {
         return $this->tipoFigura;
@@ -29,6 +30,12 @@ class FiguraGeometrica
     {
         $this->tipoFigura = $tipoFigura;
         $this->lado1 = $lado1;
+    }
+
+    public function __destruct()
+    {
+        $this->tipoFigura;
+        $this->lado1;
     }
 
     // calcularArea Vacio a menos que necesite ser sobrescrito
