@@ -6,19 +6,12 @@ class Circulo extends FiguraGeometrica
 {
     public $PI = 3.1415;
 
-    public function __construct()
-    {
-        // parent::__construct();
-        // parent::setTipofigura('Circulo');
-        // parent::setlado1('lado1');
-        // $this->PI = $PI;
-    }
+    public function __construct() {}
 
     public function __destruct()
     {
-
         return "
-        <p>El área es {$this->calcularArea()} ^2 </p>
+        <p>El área del {$this->tipoFigura} es {$this->calcularArea()} ^2 </p>
         <p>El perímetro es {$this->calcularPerimetre()} </p>
         ";
     }
@@ -39,7 +32,7 @@ class Circulo extends FiguraGeometrica
     public function __toString()
     {
         return "
-        <marques><p>El área es {$this->calcularArea()} ^2 </p>
+        <marques><p>El área del  es {$this->calcularArea()} ^2 </p>
         <p>El perímetro es {$this->calcularPerimetre()} </p>
         ";
     }
@@ -50,4 +43,4 @@ $Circulo->setLado1($_POST['lado1']);
 
 echo $Circulo->__destruct();
 
-echo "toString; <br>" . $Circulo;
+// echo "toString; <br>" . $Circulo;
